@@ -13,6 +13,8 @@ myfil1에 대해서는 가로 라인의 아래쪽이 큰 값이 되고, myfil2�
 
 이미지의 일부분과 필터 요소를 곱한 합을 이미지를 slide 시키면서 이미지의 전 영역에서 구한다 -> **합성곱(convolution) 연산**
 
+
+*spatial_filter.py*
 ![image](https://user-images.githubusercontent.com/24853452/103439369-ad7add00-4c7f-11eb-998a-84aeb3f77182.png)
 
 필터를 적용하면 출력 이미지의 크기가 작아지므로, 연속으로 다양한 필터를 적용하면 이미지가 점점 작아져 버린다.<br/>
@@ -26,6 +28,7 @@ padding과 stride 값은 라이브러리로 합성곱 네트워크를 사용할 
 ## 합성곱 신경망
 필터를 사용한 신경망을 **합성곱 신경망(Convolution Neural Network: CNN)** 이라고 한다. <br/>
 
+*CNN.py*
 정답률은 무려 97.5%!
 ![image](https://user-images.githubusercontent.com/24853452/103440434-c6d45700-4c88-11eb-910b-5d33837a16c3.png)
 
@@ -45,6 +48,7 @@ padding과 stride 값은 라이브러리로 합성곱 네트워크를 사용할 
 미니 배치마다 뉴런을 뽑아 다시 이 절차를 반복한다. <br/>
 학습 후, 예측하는 경우에는 모든 뉴런이 사용된다.
 
+*pooling_dropout_CNN.py*
 ![image](https://user-images.githubusercontent.com/24853452/103442580-c9d84300-4c9a-11eb-9358-c3722405adde.png)
 
 학습 시에는 p의 비율의 뉴런밖에 존재하지 않는 상태에서 학습 -> 예측 시에는 전체 참가하여 출력이 커져버림 <br/>
