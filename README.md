@@ -49,13 +49,14 @@ padding과 stride 값은 라이브러리로 합성곱 네트워크를 사용할 
 미니 배치마다 뉴런을 뽑아 다시 이 절차를 반복한다. <br/>
 학습 후, 예측하는 경우에는 모든 뉴런이 사용된다.
 
-### *pooling_dropout_CNN.py*
 ![image](https://user-images.githubusercontent.com/24853452/103442580-c9d84300-4c9a-11eb-9358-c3722405adde.png)
 
 학습 시에는 p의 비율의 뉴런밖에 존재하지 않는 상태에서 학습 -> 예측 시에는 전체 참가하여 출력이 커져버림 <br/>
 예측 시에는 드롭아웃을 한 층의 출력 대상의 가중치를 p배로 하여 작게 설정하여 계산을 맞춘다. <br/>
 드롭아웃은 여러 네트워크를 각각 학습시켜 예측 시에 네트워크를 평균화해 합친다
 
+
+### *pooling_dropout_CNN.py*
 pooling, dropout을 모두 넣은 CNN -> 정확도 99.2%
 ![image](https://user-images.githubusercontent.com/24853452/103443150-9946d800-4c9f-11eb-8da9-0747b7d52904.png)
 ![image](https://user-images.githubusercontent.com/24853452/103443162-ab287b00-4c9f-11eb-97ca-57c63c7704a5.png)
